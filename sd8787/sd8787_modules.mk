@@ -4,13 +4,13 @@ PRODUCT_PACKAGES += \
 	mlanutl \
 	mlan2040coex \
 	uaputl.exe \
-	mlanevent.exe \
+	mlanevent.exe 
 
 # Shared
 PRODUCT_PACKAGES += \
 	rfkill \
 	libMarvellWireless \
-	MarvellWirelessDaemon \
+	MarvellWirelessDaemon 
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
 	macadd \
 	WapiCertMgmt \
 	simal \
-	WiFiDirectDemo \
+	WiFiDirectDemo 
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -36,7 +36,7 @@ PRODUCT_PACKAGES += \
 	l2ping \
 	hciattach \
 	rfcomm \
-	avinfo \
+	avinfo 
 
 #
 # copy sd8xxx_uapsta.bin to /etc/firmware/mrvl
