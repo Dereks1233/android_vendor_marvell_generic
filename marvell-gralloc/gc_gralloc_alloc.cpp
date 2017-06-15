@@ -279,8 +279,7 @@ static int _ConvertFormatToSurfaceInfo(
 **      void ** Vaddr
 **          Point to save virtual address pointer.
 */
-int
-_MapBuffer(
+int _MapBuffer(
     gralloc_module_t const * Module,
     private_handle_t * Handle)
 {
@@ -333,8 +332,7 @@ _MapBuffer(
 **      void ** Vaddr
 **          Point to save virtual address pointer.
 */
-static int
-_TerminateBuffer(
+static int _TerminateBuffer(
     gralloc_module_t const * Module,
     private_handle_t * Handle
     )
@@ -433,8 +431,7 @@ OnError:
 **      int * Stride
 **          Pointer to hold buffer stride.
 */
-static int
-gc_gralloc_alloc_framebuffer_locked(
+static int gc_gralloc_alloc_framebuffer_locked(
     alloc_device_t * Dev,
     int Width,
     int Height,
@@ -651,8 +648,7 @@ OnError:
 **      int * Stride
 **          Pointer to hold buffer stride.
 */
-static int
-gc_gralloc_alloc_framebuffer(
+static int gc_gralloc_alloc_framebuffer(
     alloc_device_t * Dev,
     int Width,
     int Height,
@@ -810,8 +806,7 @@ out:
 **      int * Stride
 **          Pointer to hold buffer stride.
 */
-static int
-gc_gralloc_alloc_buffer(
+static int gc_gralloc_alloc_buffer(
     alloc_device_t * Dev,
     int Width,
     int Height,
@@ -1239,8 +1234,7 @@ OnError:
 **      int * Stride
 **          Pointer to hold buffer stride.
 */
-int
-gc_gralloc_alloc(
+int gc_gralloc_alloc(
     alloc_device_t * Dev,
     int Width,
     int Height,
@@ -1341,8 +1335,7 @@ static void ion_free(gc_private_handle_t const *hnd)
 **
 **      Nothing.
 */
-int
-gc_gralloc_free(
+int gc_gralloc_free(
     alloc_device_t * Dev,
     buffer_handle_t Handle
     )
@@ -1420,4 +1413,3 @@ gc_gralloc_free(
 
     return 0;
 }
-

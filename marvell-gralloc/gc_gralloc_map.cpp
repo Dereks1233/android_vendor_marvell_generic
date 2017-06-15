@@ -161,8 +161,7 @@ out:
 **      void ** Vaddr
 **          Point to save virtual address pointer.
 */
-int
-gc_gralloc_map(
+int gc_gralloc_map(
     gralloc_module_t const * Module,
     buffer_handle_t Handle,
     void ** Vaddr
@@ -306,8 +305,7 @@ out:
 **      Nothing.
 **
 */
-int
-gc_gralloc_unmap(
+int gc_gralloc_unmap(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     )
@@ -373,8 +371,7 @@ OnError:
 **      Nothing.
 **
 */
-int
-gc_gralloc_register_buffer(
+int gc_gralloc_register_buffer(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     )
@@ -602,8 +599,7 @@ OnError:
 **      Nothing.
 **
 */
-int
-gc_gralloc_unregister_buffer(
+int gc_gralloc_unregister_buffer(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     )
@@ -708,8 +704,7 @@ OnError:
 **      void ** Vaddr
 **          Point to save virtual address pointer.
 */
-int
-gc_gralloc_lock(
+int gc_gralloc_lock(
     gralloc_module_t const* Module,
     buffer_handle_t Handle,
     int Usage,
@@ -872,8 +867,7 @@ static int pmem_flush(gc_private_handle_t *hnd)
 **      Nothing.
 **
 */
-int
-gc_gralloc_unlock(
+int gc_gralloc_unlock(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
 )
@@ -956,8 +950,7 @@ gc_gralloc_unlock(
 **      Nothing.
 */
 
-int
-gc_gralloc_flush(
+int gc_gralloc_flush(
     buffer_handle_t Handle
     )
 {

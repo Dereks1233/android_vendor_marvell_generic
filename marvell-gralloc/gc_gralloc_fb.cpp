@@ -139,8 +139,7 @@ struct fb_context_t
 **
 **      Nothing.
 */
-static int
-fb_setSwapInterval(
+static int fb_setSwapInterval(
     struct framebuffer_device_t * Dev,
     int Interval
     )
@@ -174,8 +173,7 @@ fb_setSwapInterval(
 **
 **      Nothing.
 */
-static int
-fb_post(
+static int fb_post(
     struct framebuffer_device_t * Dev,
     buffer_handle_t Buffer
     )
@@ -272,8 +270,7 @@ fb_post(
 **
 **      Nothing.
 */
-int
-mapFrameBufferLocked(
+int mapFrameBufferLocked(
     struct private_module_t * Module
     )
 {
@@ -586,8 +583,7 @@ mapFrameBufferLocked(
 **
 **      Nothing.
 */
-static int
-mapFrameBuffer(
+static int mapFrameBuffer(
     struct private_module_t* Module
     )
 {
@@ -615,8 +611,7 @@ mapFrameBuffer(
 **
 **      Nothing.
 */
-static int
-fb_close(
+static int fb_close(
     struct hw_device_t * Dev
     )
 {
@@ -649,8 +644,7 @@ fb_close(
 **      hw_device_t ** Device
 **          Framebuffer device handle.
 */
-int
-fb_device_open(
+int fb_device_open(
     hw_module_t const * Module,
     const char * Name,
     hw_device_t ** Device
@@ -744,4 +738,3 @@ fb_device_open(
 
     return status;
 }
-

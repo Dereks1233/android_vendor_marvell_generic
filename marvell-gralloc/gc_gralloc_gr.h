@@ -40,26 +40,22 @@ roundUpToPageSize(size_t x)
     return (x + (PAGE_SIZE - 1)) & ~(PAGE_SIZE - 1);
 }
 
-int
-mapFrameBufferLocked(
+int mapFrameBufferLocked(
     struct private_module_t * Module
     );
 
-int
-gc_gralloc_map(
+int gc_gralloc_map(
     gralloc_module_t const * Module,
     buffer_handle_t Handle,
     void ** Vaddr
     );
 
-int
-gc_gralloc_unmap(
+int gc_gralloc_unmap(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     );
 
-int
-gc_gralloc_alloc(
+int gc_gralloc_alloc(
     alloc_device_t * Dev,
     int Width,
     int Height,
@@ -69,26 +65,22 @@ gc_gralloc_alloc(
     int * Stride
     );
 
-int
-gc_gralloc_free(
+int gc_gralloc_free(
     alloc_device_t * Dev,
     buffer_handle_t Handle
     );
 
-int
-gc_gralloc_register_buffer(
+int gc_gralloc_register_buffer(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     );
 
-int
-gc_gralloc_unregister_buffer(
+int gc_gralloc_unregister_buffer(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     );
 
-int
-gc_gralloc_lock(
+int gc_gralloc_lock(
     gralloc_module_t const * Module,
     buffer_handle_t Handle,
     int Usage,
@@ -99,22 +91,18 @@ gc_gralloc_lock(
     void ** Vaddr
     );
 
-int
-gc_gralloc_unlock(
+int gc_gralloc_unlock(
     gralloc_module_t const * Module,
     buffer_handle_t Handle
     );
 
-int
-gc_gralloc_perform(
+int gc_gralloc_perform(
     gralloc_module_t const * Module,
     int Operation,
     ...
     );
 
-int
-gc_gralloc_flush(
+int gc_gralloc_flush(
     buffer_handle_t Handle
     );
 #endif /* __gc_gralloc_gr_h_ */
-

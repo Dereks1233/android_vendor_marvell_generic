@@ -107,8 +107,7 @@ struct gc_private_handle_t
         magic = 0;
     }
 
-    static int
-    validate(
+    static int validate(
         const native_handle * Handle
         )
     {
@@ -153,4 +152,3 @@ struct gc_private_handle_t
 };
 
 #endif /* __gc_gralloc_priv_h_ */
-

@@ -40,52 +40,45 @@
 extern "C" {
 #endif
 
-int
-hwc_prepare(
+int hwc_prepare(
     hwc_composer_device_1_t * dev,
     size_t numDisplays,
     hwc_display_contents_1_t** displays
     );
 
-int
-hwc_set(
+int hwc_set(
     hwc_composer_device_1_t * dev,
     size_t numDisplays,
     hwc_display_contents_1_t** displays
     );
 
-int
-hwc_eventControl(
+int hwc_eventControl(
     hwc_composer_device_1_t * dev,
     int disp,
     int event,
     int enabled
     );
 
-int
-hwc_blank(
+int hwc_blank(
     struct hwc_composer_device_1 * dev,
     int disp,
     int blank
     );
 
-int
-hwc_query(
+int hwc_query(
     hwc_composer_device_1_t * dev,
     int what,
     int* value
     );
 
-int
-hwc_getDisplayConfigs(
+int hwc_getDisplayConfigs(
     struct hwc_composer_device_1* dev,
     int disp,
     uint32_t* configs,
     size_t* numConfigs
     );
 
-int
-hwc_getDisplayAttributes(
+int hwc_getDisplayAttributes(
     struct hwc_composer_device_1* dev,
     int disp,
     uint32_t config,
@@ -93,13 +86,11 @@ hwc_getDisplayAttributes(
     int32_t* values
     );
 
-int
-hwc_device_close(
+int hwc_device_close(
     struct hw_device_t * dev
     );
 
-int
-hwc_device_open(
+int hwc_device_open(
     const struct hw_module_t * module,
     const char * name,
     struct hw_device_t ** device

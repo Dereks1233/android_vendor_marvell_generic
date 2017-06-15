@@ -88,11 +88,11 @@ typedef struct _vmeta_user_info {
 
 
 #ifndef UNSG8
-#define UNSG8 unsigned char
+#define UNSG8 unsigned char 
 #endif
 
 #ifndef SIGN8
-#define SIGN8 char
+#define SIGN8 char 
 #endif
 
 #ifndef _ASM_LINUX_DMA_MAPPING_H
