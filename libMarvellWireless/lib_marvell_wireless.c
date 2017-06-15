@@ -18,13 +18,13 @@
 * of the Materials, either expressly, by implication, inducement, estoppel or
 * otherwise. Any license under such intellectual property rights must be
 * express and approved by Marvell in writing.
-* 
+*
 */
 #define LOG_TAG "libMarvellWireless"
 #include <stdio.h>
 #include <utils/Log.h>
 #include <stdlib.h>
-#include <sys/types.h>  
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
 #include <sys/un.h>
@@ -32,6 +32,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <errno.h>
+#include <string.h>
 #include "marvell_wireless.h"
 
 #define SOCKERR_IO          -1
@@ -149,35 +150,35 @@ static int wireless_send_command(const char *cmd)
     buffer[len++] = '\0';
     n = write(conn_fd, buffer, len);
 
-    if (n == SOCKERR_IO) 
+    if (n == SOCKERR_IO)
     {
         ALOGE("write error on fd %d\n", conn_fd);
         ret = 1;
         goto out;
     }
-    else if (n == SOCKERR_CLOSED) 
+    else if (n == SOCKERR_CLOSED)
     {
         ALOGE("fd %d has been closed.\n", conn_fd);
         ret = 1;
         goto out;
     }
-    else 
+    else
         ALOGI("Wrote %s to server. \n", buffer);
 
     n = read(conn_fd, buffer, sizeof (buffer));
-    if (n == SOCKERR_IO) 
+    if (n == SOCKERR_IO)
     {
         ALOGE("read error on fd %d\n", conn_fd);
         ret = 1;
         goto out;
     }
-    else if (n == SOCKERR_CLOSED) 
+    else if (n == SOCKERR_CLOSED)
     {
         ALOGE("fd %d has been closed.\n", conn_fd);
         ret = 1;
         goto out;
     }
-    else 
+    else
     {
         if(!strncmp(buffer,"0,OK", strlen("0,OK")))
             ret = 0;
@@ -187,7 +188,7 @@ static int wireless_send_command(const char *cmd)
 out:
     close(conn_fd);
 out1:
-    return ret; 
+    return ret;
 }
 
 /* returns fd if all OK, -1 on error */
@@ -222,4 +223,3 @@ error:
     close (fd);
     return ret;
 }
-
